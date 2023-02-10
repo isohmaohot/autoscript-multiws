@@ -8,7 +8,7 @@ CEKEXPIRED () {
     echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
     else
     echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
-    echo -e "\e[31mRenew IP letak tempoh banyak kit okay? hehe syg ktk #\e[0m"
+    echo -e "\e[31mRENEW SCRIPT ANDA #\e[0m"
     exit 0
 fi
 }
