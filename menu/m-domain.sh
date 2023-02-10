@@ -3,7 +3,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
     today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/pontora/autoscript-multiws/main/permission/ip | grep $MYIP | awk '{print $3}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/permission/ip | grep $MYIP | awk '{print $3}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
     else
@@ -12,7 +12,7 @@ CEKEXPIRED () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/pontora/autoscript-multiws/main/permission/ip | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/permission/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 CEKEXPIRED
@@ -42,5 +42,5 @@ case $opt in
 2) clear ; certv2ray ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo "Anda salah tekan" ; sleep 1 ; m-domain ;;
+*) echo "Masukkan Angka Yang Benar" ; sleep 1 ; m-domain ;;
 esac
