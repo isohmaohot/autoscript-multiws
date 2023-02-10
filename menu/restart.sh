@@ -277,5 +277,5 @@ case $Restart in
                 clear
                 exit
                 ;;
-                *) echo -e "" ; echo "isohmaohot" ; sleep 1 ; restart ;;               
+                *) echo -e "" ; echo "Masukkan Angka Yang Benar" ; sleep 1 ; restart ;;               
         esac
