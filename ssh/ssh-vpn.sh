@@ -17,16 +17,16 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=MY
-state=Malaysia
-locality=Kuala Lumpur
+country=ID
+state=Indonesia
+locality=Jakarta
 organization=none
 organizationalunit=none
 commonname=none
 email=none
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -275,51 +275,51 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/menu.sh"
-wget -O m-vmess "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-vmess.sh"
-wget -O m-vless "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-vless.sh"
-wget -O running "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/clearcache.sh"
-wget -O m-ssws "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-ssws.sh"
-wget -O m-trojan "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-trojan.sh"
+wget -O menu "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/menu.sh"
+wget -O m-vmess "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-vmess.sh"
+wget -O m-vless "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-vless.sh"
+wget -O running "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/clearcache.sh"
+wget -O m-ssws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-ssws.sh"
+wget -O m-trojan "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-trojan.sh"
 
 # menu ssh ovpn
-wget -O m-sshovpn "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-sshovpn.sh"
-wget -O usernew "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/tendang.sh"
-wget -O sshws "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/sshws.sh"
+wget -O m-sshovpn "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-sshovpn.sh"
+wget -O usernew "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/tendang.sh"
+wget -O sshws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/sshws.sh"
 
 # menu system
-wget -O m-system "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-system.sh"
-wget -O m-domain "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/add-host.sh"
-#wget -O port-change "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/xray/certv2ray.sh"
-#wget -O m-webmin "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/m-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/speedtest_cli.py"
-#wget -O about "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/bw.sh"
-wget -O m-tcp "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/menu/tcp.sh"
+wget -O m-system "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-system.sh"
+wget -O m-domain "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/add-host.sh"
+#wget -O port-change "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/xray/certv2ray.sh"
+#wget -O m-webmin "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/speedtest_cli.py"
+#wget -O about "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/bw.sh"
+wget -O m-tcp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/tcp.sh"
 
 # change port
-#wget -O port-ssl "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ssl.sh"
-#wget -O port-ovpn "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ovpn.sh"
-#wget -O port-tr "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-tr.sh"
+#wget -O port-ssl "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ssl.sh"
+#wget -O port-ovpn "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ovpn.sh"
+#wget -O port-tr "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-tr.sh"
 
 
-wget -O xp "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/xp.sh"
-#wget -O asu "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/asu.sh"
-wget -O sshws "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/sshws.sh"
+wget -O xp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/xp.sh"
+#wget -O asu "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/asu.sh"
+wget -O sshws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/sshws.sh"
 
 chmod +x menu
 chmod +x m-vmess
