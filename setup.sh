@@ -1,25 +1,7 @@
 #!/bin/bash
-# dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-# biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
-
-### System Information
-TANGGAL=$(date '+%Y-%m-%d')
-TIMES="10"
-NAMES=$(whoami)
-IMP="wget -q -O"    
-CHATID="-1001849535713"
-LOCAL_DATE="/usr/bin/"
-MYIP=$(wget -qO- ipinfo.io/ip)
-CITY=$(curl -s ipinfo.io/city)
-TIME=$(date +'%Y-%m-%d %H:%M:%S')
-RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="6196762185:AAFjwHUF0xsVb7FTqlGqlHjgdNobkUz0N6g"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
-LENOS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
-secs_to_human() {
-echo -e "${WB}Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds${NC}"
-}
 
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/permission/ip > /root/tmp
