@@ -50,31 +50,7 @@ touch /var/log/xray/error.log
 touch /var/log/xray/access2.log
 touch /var/log/xray/error2.log
 # / / Ambil Xray Core Version Terbaru
-# bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.7.2
-function install_xray(){
-    print_install "Memasang modul Xray terbaru"
-    curl -s ipinfo.io/city >> /etc/xray/city
-    curl -s ipinfo.io/org | cut -d " " -f 2-10 >> /etc/xray/isp
-    xray_latest="$(curl -s https://api.github.com/repos/dharak36/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
-    xraycore_link="https://github.com/dharak36/Xray-core/releases/download/v$xray_latest/xray.linux.64bit"
-    curl -sL "$xraycore_link" -o xray
-#    unzip -q xray.zip && rm -rf xray.zip
-    mv xray /usr/sbin/xray
-    print_success "Xray Core"
-    
-    cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/xray.pem
-    wget -O /etc/xray/config.json "${REPO}xray/config.json" >/dev/null 2>&1 
-    #wget -O /usr/sbin/xray/ "${REPO}bin/xray" >/dev/null 2>&1
-    wget -O /usr/sbin/websocket "${REPO}bin/ws" >/dev/null 2>&1
-    wget -O /etc/websocket/tun.conf "${REPO}xray/tun.conf" >/dev/null 2>&1 
-    wget -O /etc/systemd/system/ws.service "${REPO}xray/ws.service" >/dev/null 2>&1 
-    wget -q -O /etc/ipserver "${REPO}server/ipserver" && bash /etc/ipserver >/dev/null 2>&1
-
-    # > Set Permission
-    chmod +x /usr/sbin/xray
-    chmod +x /usr/sbin/websocket
-    chmod 644 /etc/websocket/tun.conf
-    chmod 644 /etc/systemd/system/ws.service
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.7.2
 
 ## crt xray
 systemctl stop nginx
