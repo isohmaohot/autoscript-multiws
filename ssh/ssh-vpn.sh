@@ -17,9 +17,9 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Jakarta
+country=MY
+state=Malaysia
+locality=Kuala_Lumpur
 organization=none
 organizationalunit=none
 commonname=none
@@ -303,18 +303,18 @@ wget -O m-domain "https://raw.githubusercontent.com/isohmaohot/autoscript-multiw
 wget -O add-host "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/add-host.sh"
 #wget -O port-change "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-change.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/xray/certv2ray.sh"
-#wget -O m-webmin "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-webmin.sh"
+wget -O m-webmin "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/speedtest_cli.py"
-#wget -O about "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/about.sh"
+wget -O about "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/about.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/auto-reboot.sh"
 wget -O restart "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/bw.sh"
 wget -O m-tcp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/tcp.sh"
 
 # change port
-#wget -O port-ssl "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ssl.sh"
-#wget -O port-ovpn "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ovpn.sh"
-#wget -O port-tr "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-tr.sh"
+#wget -O port-ssl "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ssl.sh"
+#wget -O port-ovpn "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ovpn.sh"
+#wget -O port-tr "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-tr.sh"
 
 
 wget -O xp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/xp.sh"
@@ -347,9 +347,9 @@ chmod +x m-domain
 chmod +x add-host
 #chmod +x port-change
 chmod +x certv2ray
-#chmod +x m-webmin
+chmod +x m-webmin
 chmod +x speedtest
-#chmod +x about
+chmod +x about
 chmod +x auto-reboot
 chmod +x restart
 chmod +x bw
