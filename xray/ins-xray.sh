@@ -513,18 +513,6 @@ systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
 
-function finish(){
-TEXT="
-<u>INFORMATION VPS INSTALL SC</u>
-<code>TIME    : </code><code>${TIME}</code>
-<code>IPVPS   : </code><code>${MYIP}</code>
-<code>DOMAIN  : </code><code>${domain}</code>
-<code>IP VPS  : </code><code>${MYIP}</code>
-<code>LOKASI  : </code><code>${CITY}</code>
-<code>USER    : </code><code>${NAMES}</code>
-<code>RAM     : </code><code>${RAMMS}MB</code>
-<code>LINUX   : </code><code>${OS}</code>
-
 cd /usr/bin/
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/xray/add-ws.sh" && chmod +x add-ws
