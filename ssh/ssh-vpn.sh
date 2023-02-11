@@ -305,7 +305,7 @@ wget -O add-host "https://raw.githubusercontent.com/isohmaohot/autoscript-multiw
 wget -O certv2ray "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/xray/certv2ray.sh"
 wget -O m-webmin "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/m-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/about.sh"
+#wget -O about "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/about.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/auto-reboot.sh"
 wget -O restart "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/bw.sh"
@@ -349,7 +349,7 @@ chmod +x add-host
 chmod +x certv2ray
 chmod +x m-webmin
 chmod +x speedtest
-chmod +x about
+#chmod +x about
 chmod +x auto-reboot
 chmod +x restart
 chmod +x bw
