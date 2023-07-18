@@ -36,7 +36,7 @@ echo -e " [\e[36m•7\e[0m] Restart Nginx"
 echo -e " [\e[36m•8\e[0m] Restart Badvpn"
 echo -e " [\e[36m•9\e[0m] Restart XRAY"
 echo -e " [\e[36m10\e[0m] Restart WEBSOCKET"
-echo -e " [\e[36m11\e[0m] Restart Trojan Go"
+echo -e " [\e[36m11\e[0m] Restart Trojan"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -79,9 +79,9 @@ case $Restart in
                 systemctl restart ws-dropbear.service
                 systemctl restart ws-stunnel.service
                 sleep 0.5
-                echo -e "[ \033[32mok\033[0m ] Restarting Trojan Go Service (via systemctl) "
+                echo -e "[ \033[32mok\033[0m ] Restarting Trojan Service (via systemctl) "
                 sleep 0.5
-                systemctl restart trojan-go.service 
+                systemctl restart trojan.service 
                 sleep 0.5
                 echo -e "[ \033[32mInfo\033[0m ] ALL Service Restarted"
                 echo ""
@@ -260,9 +260,9 @@ case $Restart in
                 sleep 1
                 echo -e "[ \033[32mok\033[0m ] Restarting Trojan Go Service (via systemctl) "
                 sleep 0.5
-                systemctl restart trojan-go.service
+                systemctl restart trojan.service
                 sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Trojan Go Service Restarted"
+                echo -e "[ \033[32mInfo\033[0m ] Trojan Service Restarted"
                 echo ""
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo ""
