@@ -134,13 +134,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -253,7 +253,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 #install bbr dan optimasi kernel
-#wget https://raw.githubusercontent.com/pontora/autoscript-multiws/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#wget https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blokir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -312,9 +312,9 @@ wget -O bw "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main
 wget -O m-tcp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/menu/tcp.sh"
 
 # change port
-#wget -O port-ssl "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ssl.sh"
-#wget -O port-ovpn "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-ovpn.sh"
-#wget -O port-tr "https://raw.githubusercontent.com/pontora/autoscript-multiws/main/port/port-tr.sh"
+#wget -O port-ssl "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ssl.sh"
+#wget -O port-ovpn "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-ovpn.sh"
+#wget -O port-tr "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/port/port-tr.sh"
 
 
 wget -O xp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/xp.sh"
