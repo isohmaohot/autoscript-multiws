@@ -319,7 +319,7 @@ wget -O m-tcp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/m
 
 wget -O xp "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/xp.sh"
 #wget -O asu "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/asu.sh"
-wget -O sshws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/sshws.sh"
+#wget -O sshws "https://raw.githubusercontent.com/isohmaohot/autoscript-multiws/main/ssh/sshws.sh"
 
 chmod +x menu
 chmod +x m-vmess
