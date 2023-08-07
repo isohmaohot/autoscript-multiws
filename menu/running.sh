@@ -44,18 +44,18 @@ basedong=$ID
 echo -e "$ITAM"
 REGION=$( curl -s ipinfo.io/region )
 #clear
-#COUNTRY=$( curl -s ipinfo.io/country )
+COUNTRY=$( curl -s ipinfo.io/country )
 #clear
-#WAKTU=$( curl -s ipinfo.ip/timezone )
+WAKTU=$( curl -s ipinfo.ip/timezone )
 #clear
 CITY=$( curl -s ipinfo.io/city )
 #clear
-#REGION=$( curl -s ipinfo.io/region )
+REGION=$( curl -s ipinfo.io/region )
 #clear
 
 # CHEK STATUS 
 openvpn_service="$(systemctl show openvpn.service --no-page)"
-#oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
+oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
 status_openvpn=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #status_ss_tls="$(systemctl show shadowsocks-libev-server@tls.service --no-page)"
 #ss_tls=$(echo "${status_ss_tls}" | grep 'ActiveState=' | cut -f2 -d=)
